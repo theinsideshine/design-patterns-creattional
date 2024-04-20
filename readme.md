@@ -10,3 +10,7 @@ Factory method pattern
 
 Abstract factory pattern
 [![Abstract-factory-pattern](images/video-abstract-factory.png)](https://youtu.be/kRN5l834nP8)
+
+
+Singleton pattern
+[![Singleton-pattern](images/video-singleton.png)](https://youtu.be/VL62vnbMQ9Q)
