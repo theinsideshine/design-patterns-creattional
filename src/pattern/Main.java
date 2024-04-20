@@ -97,11 +97,13 @@ public class Main {
         //Crear nivel uno
 
         LevelFactory levelOnefactory = new LevelOneFactory();
-        Enemig gombaLevelFactory = levelOnefactory.createEnemig().createEnemig();
+        EnemigFactory gomba2Factory = levelOnefactory.createEnemigFactory(); // Obtener la fábrica de enemigos
+        Enemig gombaLevelFactory = gomba2Factory.createEnemig(); // Crear un enemigo usando la fábrica
+
         ObjectLevel coinLevelFactory = levelOnefactory.createObject();
         Obstacule brickLevelFactory =levelOnefactory.createObstacule();
 
-        printEnemyLevel(gombaLevelFactory,"level1");
+        printEnemyLevel(gombaLevelFactory,"level1-Gomba");
         printObjectLevel(coinLevelFactory,"level1");
         printObstaculeLevel(brickLevelFactory,"level1");
 
@@ -109,11 +111,14 @@ public class Main {
         //Crear nivel dos
 
         LevelFactory levelTwofactory = new LevelTwoFactory();
-        Enemig DifficultLevelFactory = levelTwofactory.createEnemig().createEnemig();
-        ObjectLevel liveLevelFactory = levelOnefactory.createObject();
-        Obstacule cubeLevelFactory =levelOnefactory.createObstacule();
+        // Crear una fábrica de enemigos aleatorios
+        EnemigFactory randomLevelFactory = levelTwofactory.createRandomEnemigFactory();
+        // Crear un enemigo aleatorio
+        Enemig random1Enemy = randomLevelFactory.createEnemig();
+        ObjectLevel liveLevelFactory = levelTwofactory.createObject();
+        Obstacule cubeLevelFactory =levelTwofactory.createObstacule();
 
-        printEnemyLevel(DifficultLevelFactory,"level2");
+        printEnemyLevel(random1Enemy,"level2-randomEnemig");
         printObjectLevel(liveLevelFactory,"level2");
         printObstaculeLevel(cubeLevelFactory,"level2");
 

@@ -8,6 +8,8 @@ import src.pattern.factory.method.games.factories.EnemigFactory;
 public abstract class LevelFactory {
     public abstract ObjectLevel createObject();
     public abstract Obstacule createObstacule();
-    public abstract EnemigFactory createEnemig();
+    public abstract EnemigFactory createEnemigFactory();
+    public abstract EnemigFactory createRandomEnemigFactory();
+    public abstract EnemigFactory createRandomDifficultEnemigFactory();
 
 }

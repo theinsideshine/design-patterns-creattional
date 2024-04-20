@@ -6,6 +6,8 @@ import src.pattern.abs.factory.games.obstacules.Brick;
 import src.pattern.abs.factory.games.obstacules.Obstacule;
 import src.pattern.factory.method.games.factories.EnemigFactory;
 import src.pattern.factory.method.games.factories.GombaFactory;
+import src.pattern.factory.method.games.factories.RandomDifficultEnemigFactory;
+import src.pattern.factory.method.games.factories.RandomEnemigFactory;
 
 public class LevelOneFactory extends  LevelFactory{
     @Override
@@ -18,8 +20,17 @@ public class LevelOneFactory extends  LevelFactory{
         return new Brick();
     }
 
-    @Override
-    public EnemigFactory createEnemig() {
+    public EnemigFactory createEnemigFactory() {
         return new GombaFactory();
+    }
+
+    @Override
+    public EnemigFactory createRandomEnemigFactory() {
+        return new RandomEnemigFactory();
+    }
+
+    @Override
+    public EnemigFactory createRandomDifficultEnemigFactory() {
+        return new RandomDifficultEnemigFactory();
     }
 }
