@@ -9,4 +9,4 @@ Factory method pattern
 
 
 Abstract factory pattern
-[![Abstract-factory-pattern](images/video-factory-method.png)](https://youtu.be/kRN5l834nP8)
+[![Abstract-factory-pattern](images/video-abstract-factory.png)](https://youtu.be/kRN5l834nP8)
