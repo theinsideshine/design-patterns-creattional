@@ -1,4 +1,4 @@
-This project is under construction
+
 
 Didactic use of creational patterns
 
