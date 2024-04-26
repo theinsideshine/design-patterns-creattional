@@ -14,3 +14,12 @@ Abstract factory pattern
 
 Singleton pattern
 [![Singleton-pattern](images/video-singleton.png)](https://youtu.be/VL62vnbMQ9Q)
+
+
+Builder pattern
+[![Builder pattern](images/video-builder.png)](https://youtu.be/GsWuwOQC5P4)
+
+
+Prototype pattern
+[![Prototype pattern](images/video-prototype.png)](https://youtu.be/wFp9r9FPrVM)
+

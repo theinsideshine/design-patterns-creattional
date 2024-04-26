@@ -1,15 +1,11 @@
 package src.pattern;
 
-import src.pattern.abs.factory.games.factories.LevelFactory;
-import src.pattern.abs.factory.games.factories.LevelOneFactory;
-import src.pattern.abs.factory.games.factories.LevelTwoFactory;
 import src.pattern.abs.factory.games.objetcslevel.ObjectLevel;
 import src.pattern.abs.factory.games.obstacules.Obstacule;
+import src.pattern.builder.PowerUp;
+import src.pattern.builder.PowerUpBuilder;
 import src.pattern.factory.method.games.enemigs.Enemig;
-import src.pattern.factory.method.games.factories.EnemigFactory;
-import src.pattern.factory.method.games.factories.GombaFactory;
-import src.pattern.factory.method.games.factories.RandomDifficultEnemigFactory;
-import src.pattern.factory.method.games.factories.RandomEnemigFactory;
+import src.pattern.prototype.Usuario;
 import src.pattern.singleton.*;
 
 
@@ -71,7 +67,7 @@ public class Main {
         // Obtener y usar el entorno de la aplicación
         System.out.println("Entorno de la aplicación: " +  appConfig.getEnvironment());
 
-        System.out.println("Use factory method");
+        /*System.out.println("Use factory method");
 
         // Crear una fábrica de enemigos aleatorios
         EnemigFactory randomFactory = new RandomEnemigFactory();
@@ -120,7 +116,40 @@ public class Main {
 
         printEnemyLevel(random1Enemy,"level2-randomEnemig");
         printObjectLevel(liveLevelFactory,"level2");
-        printObstaculeLevel(cubeLevelFactory,"level2");
+        printObstaculeLevel(cubeLevelFactory,"level2");*/
+
+
+
+       /* System.out.println("Use Builder Pattern");
+
+        PowerUpBuilder builder = new PowerUpBuilder("Super Mushroom");
+        PowerUp mushroom = builder.setColor("Red").setSize("Medium").build();
+        System.out.println(mushroom); // Output: Red Medium Super Mushroom
+
+        builder = new PowerUpBuilder("Fire Flower");
+        PowerUp flower = builder.setColor("Orange").setSize("Small").build();
+        System.out.println(flower); // Output: Orange Small Fire Flower
+
+        builder = new PowerUpBuilder("POP");
+        PowerUp pop = builder.setSize("Large").build();
+        System.out.println(pop); // Output: Orange Small Fire Flower*/
+
+
+        System.out.println("Use Prototype Pattern");
+
+        Usuario usuario1 = new Usuario();
+        usuario1.setEstadoCivil("Soltero");
+        usuario1.setNombre("German");
+        usuario1.setApellido("Paez");
+        usuario1.setEdad(20);
+        System.out.println(usuario1);
+
+
+        Usuario usuario2 = usuario1.clone();
+
+        System.out.println(usuario2);
+        usuario2.setEstadoCivil("Casado");
+        System.out.println(usuario2);
 
     }
 
